@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Dream Jobs - Smart AI-Powered Job Search in HK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">Get Dream Jobs</div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active">Search</a>
+                <a href="#" class="nav-link">Tips</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </nav>
+
+        <div class="hero container">
+            <h1 class="hero-title">Get Dream Jobs</h1>
+            <p class="hero-subtitle">Smart AI-Powered Job Search for International Professionals in Hong Kong</p>
+            <p class="disclaimer">Created by Jiahe Wang with Antigravity.</p>
+
+            <div class="search-container glass">
+                <form id="dream-job-form" class="search-form">
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="preferences">Role & Preferences</label>
+                            <input type="text" id="preferences" placeholder="e.g. Senior Software Engineer" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="salary">Salary Range (HK$)</label>
+                            <input type="text" id="salary" placeholder="e.g. 40k-60k">
+                        </div>
+                        <div class="input-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="e.g. Central, Island">
+                        </div>
+                        <div class="input-group">
+                            <label for="industry">Industry</label>
+                            <input type="text" id="industry" placeholder="e.g. Technology">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-search">Find Dream Jobs</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="results-section">
+            <div id="status-indicator" class="status-indicator hidden">
+                <div class="spinner"></div>
+                <span id="status-text">Analyzing preferences...</span>
+            </div>
+            <div id="jobs-container" class="jobs-grid">
+                <!-- Results will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Assistant UI -->
+    <div class="ai-widget">
+        <button id="ai-toggle" class="ai-toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Career AI</span>
+        </button>
+
+        <div id="ai-chat-window" class="ai-chat-window hidden">
+            <div class="chat-header">
+                <h3>Career Assistant</h3>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="message ai">Hello! I'm your JobSeeker AI. How can I help with your career today?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="ai-input" placeholder="Ask anything about yours career...">
+                <button id="send-ai-msg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
